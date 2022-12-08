@@ -31,7 +31,7 @@ public class DragAndDropPage {
     }
     public void dragAndDrop(WebDriver driver){
         Actions actions = new Actions(driver);
-        actions.clickAndHold(aBox).moveToElement(bBox).release().perform();
+        // actions.clickAndHold(aBox).moveToElement(bBox).release().perform();
         actions.dragAndDrop(aBox,bBox).perform();
     }
     public String getTextBoxA(){
