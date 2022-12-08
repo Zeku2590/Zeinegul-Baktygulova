@@ -29,9 +29,10 @@ public class DragAndDropPage {
     public void clickDragAndDropButton(){
         dragAndDropButton.click();
     }
-    public void dragAndDrop(WebDriver driver) throws InterruptedException {
+    public void dragAndDrop(WebDriver driver){
         Actions actions = new Actions(driver);
-        actions.dragAndDrop(bBox,aBox).perform();
+        // actions.clickAndHold(aBox).moveToElement(bBox).release().perform();
+        actions.dragAndDrop(aBox,bBox).perform();
     }
     public String getTextBoxA(){
         return BrowserUtils.getText(aBox);
